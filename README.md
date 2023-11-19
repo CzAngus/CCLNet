@@ -39,6 +39,7 @@ pip install faiss-gpu
    - run `python data/process.py` to pepare the dataset, the training data will be stored in ".npy" format.
 
 ### Training
+We train all models in NVIDIA RTX A6000, you can set batchsize into 4persons(batch_size) 12photos/8photos(num_instances) in config/xx.yaml if CUDA out of memory.
 ```
 cd CCLNet
 mkdir save/logs
