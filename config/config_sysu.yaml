@@ -1,0 +1,79 @@
+#config for unspervised Cross Person re-ID (CLIP-Enhanced Contrastive Learning Network)
+
+#dataset configs
+dataset: sysu
+data_path: /home/cz/dataset/SYSU-MM01/
+pseudo_labels_path: /home/cz/dataset/SYSU-MM01/pseudo_labels/  # Do not modify the file name 'pseudo_labels' in your dataset!!
+batch_size: 4
+test_batch_size: 64
+num_instances: 16
+workers: 4
+mode: all
+img_w: 144
+img_h: 288
+
+#cluster DBCSAN configs
+eps: 0.6
+eps-gap: 0.02
+k1: 30
+k2: 6
+
+#model configs
+stride_size: [16,16]
+arch: RN50
+momentum: 0.1
+change_scale: 0.1
+pooling_type: gem
+lr: 0.00035
+weight_decay: 0.0005
+bias_lr_factor: 2
+weight_decay_bias: 0.0005
+steps: [30,50]
+gamma: 0.1
+step_size: 20
+resume_path:
+warmup_factor: 0.01
+warmup_iters: 10
+warmup_method: 'linear'
+
+#training configs
+gpu: 0   #for which gpu to run!!!
+seed: 1
+print_freq: 100
+temp: 0.05
+save_epoch: 10
+eval_step: 5
+use_hard: False
+
+#stage1:
+stage1_maxepochs: 60
+stage1_baselr: 0.00035
+stage1_weight_decay: 0.0001
+stage1_lrmin: 0.000001
+stage1_warmup_lrinit: 0.00001
+stage1_warmup_epoch: 5
+stage1_batch_size: 128
+
+#stage2
+base_epoch: 61
+stage2_maxepochs: 120
+stage2_baselr: 0.00035
+stage2_laterlr_factor: 0.1
+stage2_weight_decay: 0.0005
+stage2_weight_decay_bias: 0.0005
+stage2_bias_lr_factor: 2
+
+stage2_steps: [30,50]
+stage2_gamma: 0.1
+stage2_warmup_factor: 0.01
+stage2_warmup_iters: 10
+stage2_warmup_method: 'linear'
+
+stage2_ims_per_batch: 128
+
+#log path
+logs_dir: save/logs/
+logs_time: 23-11-19
+logs_file: uploadgithub_test
+vis_log_dir: save/logs/vis_log/
+model_path: save/checkpoints/
