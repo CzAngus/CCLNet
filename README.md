@@ -4,7 +4,7 @@ This is Official Repository for "Unveiling the Power of CLIP in Unsupervised Vis
 
 
 ### Update Time
--- 2023-11-08 We release the code to github.
+-- 2023-11-19 We release the code to github.
 
 ### Method
 
