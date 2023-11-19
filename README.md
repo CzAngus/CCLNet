@@ -39,6 +39,11 @@ pip install faiss-gpu
    - run `python data/process.py` to pepare the dataset, the training data will be stored in ".npy" format.
 
 ### Training
+```
+cd CCLNet
+mkdir save/logs
+mkdir save/checkpoints
+```
 
 For example, if you want to run CCLNet for the SYSU-MM01, you need to train a model to get pseudo_labels for later CLIP training.
 
