@@ -72,7 +72,7 @@ Codebase from [CLIP](https://github.com/openai/CLIP)[1], [CoOp](https://github.c
 | Settings                    | Pretrained | Loss | Rank@1 | mAP | Model(pth)                 |
 |-----------------------------|------------|---|--------|-----|-----------------------|
 | SYSU-MM01(train_prepare.py) | CLIP     | L_qr+L_qt | ~50.02%     | ~45.52%  | [model_perpare.pth](https://drive.google.com/file/d/1mK41qVbKmWHQLgfSPijk0RYDrWVJdOsG/view?usp=drive_link) |
-| SYSU-MM01(train_clip.py)    | CLIP     | L_qr+L_qt+L_i2tce  | ~54.01%     | ~52.02%  | [model_best.pth](https://drive.google.com/file/d/1-qniQHrgmVYxERh62hacV0Kt07y_sZuU/view?usp=drive_link) |
+| SYSU-MM01(train_clip.py)    | CLIP     | L_qr+L_qt+L_i2tce  | ~55.31%     | ~50.38%  | [model_best.pth](https://drive.google.com/file/d/1-qniQHrgmVYxERh62hacV0Kt07y_sZuU/view?usp=drive_link) |
 
 ### 4.Citation
 
